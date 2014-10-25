@@ -1,6 +1,10 @@
 {
   "name": "template_front",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayato0211/my-gulp-template"
+  },
   "description": "template front end",
   "author": "ayato_p",
   "dependencies": {},
