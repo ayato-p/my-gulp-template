@@ -40,6 +40,7 @@ var src = {
       self: './jade_data'
     };
 
+var MAIN_JS_FILE_NAME = 'main.js';
 
 /*
  * Others
@@ -61,9 +62,9 @@ gulp.task('clean', function(){
 /*
  * around JavaScript
  */
-var MAIN_JS_FILE_NAME = 'main.js';
 function scripts(watch) {
-  var config = {debug: !argv.production, cache: {}, packageCache: {}, fullPaths: watch},
+  var config = { debug: !argv.production, cache: {},
+                 packageCache: {}, fullPaths: true },
       bundler = browserify(src.js + '/' + MAIN_JS_FILE_NAME, config),
       rebundle = function() {
         return bundler.bundle().
